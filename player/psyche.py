@@ -76,7 +76,7 @@ class Aspect:
         self.descending_name = descending_name
         self.display_name = name
         self.description = description
-        self.presence = 1
+        self.presence = 0
         self._max_presence = MAX_PRESENCE
         self._min_presence = MIN_PRESENCE
         self._visible = visible
