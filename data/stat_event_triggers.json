@@ -1,0 +1,40 @@
+{
+    "stat_events": [
+      {
+        "stat": "ego",
+        "threshold": 80,
+        "type": "high",
+        "event": "The Mirror Cracks",
+        "effect": "Narrative event where the player is confronted by their false self-image."
+      },
+      {
+        "stat": "id",
+        "threshold": 90,
+        "type": "high",
+        "event": "Unleashed",
+        "effect": "Player makes an irreversible impulsive choice. Violence or indulgence scene."
+      },
+      {
+        "stat": "superego",
+        "threshold": 85,
+        "type": "high",
+        "event": "Guilt's Grip",
+        "effect": "Player begins hallucinating a judgmental figure following them."
+      },
+      {
+        "stat": "shadow",
+        "threshold": 50,
+        "type": "high",
+        "event": "First Contact",
+        "effect": "A hidden memory surfaces, unlocking a new ability or dialogue path."
+      },
+      {
+        "stat": "self",
+        "threshold": 100,
+        "type": "exact",
+        "event": "Integration",
+        "effect": "Unlocks the 'Self' and changes the tone of the world."
+      }
+    ]
+  }
+  

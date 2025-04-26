@@ -1,0 +1,26 @@
+{
+    "stat_conflicts": [
+      {
+        "stat": "id",
+        "opposes": "superego",
+        "conflict_type": "inverse",
+        "description": "Raw desire and moral restraint are opposites. As one rises, the other tends to fall.",
+        "conflict_strength": 0.5
+      },
+      {
+        "stat": "ego",
+        "opposes": "anima",
+        "conflict_type": "tension",
+        "description": "Strong ego resists internal contradiction or emotional nuance.",
+        "conflict_strength": 0.3
+      },
+      {
+        "stat": "persona",
+        "opposes": "shadow",
+        "conflict_type": "masking",
+        "description": "Persona hides what Shadow tries to reveal.",
+        "conflict_strength": 0.4
+      }
+    ]
+  }
+  
