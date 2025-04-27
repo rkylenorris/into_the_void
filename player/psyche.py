@@ -4,8 +4,6 @@ MAX_PRESENCE = 50
 MIN_PRESENCE = -50
 
 
-
-    
 class Conflict:
     def __init__(self, aspect: str, opposes: str, name:str, description: str, strength: float) -> None:
         self.aspect_name = aspect
