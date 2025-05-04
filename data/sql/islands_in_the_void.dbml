@@ -1,0 +1,209 @@
+
+Project "Islands in the Void" {
+  database_type: "PostgreSQL"
+}
+
+/* --- World Schema --- */
+Table map {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table room {
+  id serial [primary key]
+  map_id int [ref: > map.id]
+  name text
+  theme_id int [ref: > theme.id]
+  room_type_id int [ref: > room_type.id]
+  ambiance_id int [ref: > ambiance.id]
+}
+
+Table connection {
+  id serial [primary key]
+  from_room_id int [ref: > room.id]
+  to_room_id int [ref: > room.id]
+  bidirectional boolean
+}
+
+Table theme {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table adjective {
+  id serial [primary key]
+  word text
+}
+
+Table ambiance {
+  id serial [primary key]
+  description text
+}
+
+Table room_type {
+  id serial [primary key]
+  name text
+}
+
+/* --- Psyche Schema --- */
+Table aspect {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table conflict {
+  id serial [primary key]
+  aspect_id int [ref: > aspect.id]
+  opposes_id int [ref: > aspect.id]
+  name text
+  description text
+  strength float
+}
+
+Table resolution {
+  id serial [primary key]
+  conflict_id int [ref: > conflict.id]
+  description text
+}
+
+Table threshold {
+  id serial [primary key]
+  aspect_id int [ref: > aspect.id]
+  level int
+  name text
+  description text
+}
+
+Table milestone {
+  id serial [primary key]
+  name text
+  description text
+}
+
+/* --- Player Schema --- */
+Table player {
+  id serial [primary key]
+  name text
+  created_at timestamp
+}
+
+Table character {
+  id serial [primary key]
+  player_id int [ref: > player.id]
+  current_room_id int [ref: > room.id]
+}
+
+Table inventory {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  item_id int [ref: > item.id]
+}
+
+Table toolkit {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  name text
+  effect text
+}
+
+Table state {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  key text
+  value text
+}
+
+Table aspect_presence_log {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  aspect_id int [ref: > aspect.id]
+  presence int
+  timestamp timestamp
+}
+
+Table ritual_log {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  ritual_id int [ref: > ritual.id]
+  performed_at timestamp
+}
+
+Table meditation_log {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  entry text
+  timestamp timestamp
+}
+
+Table grounding_exercises_log {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  technique text
+  notes text
+  timestamp timestamp
+}
+
+Table void_journal_entry {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  content text
+  created_at timestamp
+}
+
+Table tarot_card {
+  id serial [primary key]
+  name text
+  meaning text
+}
+
+Table tarot_reading {
+  id serial [primary key]
+  character_id int [ref: > character.id]
+  card_id int [ref: > tarot_card.id]
+  interpretation text
+  created_at timestamp
+}
+
+/* --- Narrative Schema --- */
+Table npc {
+  id serial [primary key]
+  name text
+  description text
+  location_id int [ref: > room.id]
+}
+
+Table key_npc {
+  id serial [primary key]
+  npc_id int [ref: > npc.id]
+  symbolic_role text
+}
+
+Table item {
+  id serial [primary key]
+  name text
+  description text
+  motif_id int [ref: > motif.id]
+}
+
+Table motif {
+  id serial [primary key]
+  symbol text
+  meaning text
+}
+
+Table ritual {
+  id serial [primary key]
+  name text
+  requirement text
+  effect text
+}
+
+Table place {
+  id serial [primary key]
+  name text
+  theme_id int [ref: > theme.id]
+  description text
+}

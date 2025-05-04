@@ -1,0 +1,209 @@
+
+Project "Islands in the Void" {
+  database_type: "PostgreSQL"
+}
+
+/* --- World Schema --- */
+Table world.map {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table world.room {
+  id serial [primary key]
+  map_id int [ref: > world.map.id]
+  name text
+  theme_id int [ref: > world.theme.id]
+  room_type_id int [ref: > world.room_type.id]
+  ambiance_id int [ref: > world.ambiance.id]
+}
+
+Table world.connection {
+  id serial [primary key]
+  from_room_id int [ref: > world.room.id]
+  to_room_id int [ref: > world.room.id]
+  bidirectional boolean
+}
+
+Table world.theme {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table world.adjective {
+  id serial [primary key]
+  word text
+}
+
+Table world.ambiance {
+  id serial [primary key]
+  description text
+}
+
+Table world.room_type {
+  id serial [primary key]
+  name text
+}
+
+/* --- Psyche Schema --- */
+Table psyche.aspect {
+  id serial [primary key]
+  name text
+  description text
+}
+
+Table psyche.conflict {
+  id serial [primary key]
+  aspect_id int [ref: > psyche.aspect.id]
+  opposes_id int [ref: > psyche.aspect.id]
+  name text
+  description text
+  strength float
+}
+
+Table psyche.resolution {
+  id serial [primary key]
+  conflict_id int [ref: > psyche.conflict.id]
+  description text
+}
+
+Table psyche.threshold {
+  id serial [primary key]
+  aspect_id int [ref: > psyche.aspect.id]
+  level int
+  name text
+  description text
+}
+
+Table psyche.milestone {
+  id serial [primary key]
+  name text
+  description text
+}
+
+/* --- Player Schema --- */
+Table player.player {
+  id serial [primary key]
+  name text
+  created_at timestamp
+}
+
+Table player.character {
+  id serial [primary key]
+  player_id int [ref: > player.player.id]
+  current_room_id int [ref: > world.room.id]
+}
+
+Table player.inventory {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  item_id int [ref: > narrative.item.id]
+}
+
+Table player.toolkit {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  name text
+  effect text
+}
+
+Table player.state {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  key text
+  value text
+}
+
+Table player.aspect_presence_log {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  aspect_id int [ref: > psyche.aspect.id]
+  presence int
+  timestamp timestamp
+}
+
+Table player.ritual_log {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  ritual_id int [ref: > narrative.ritual.id]
+  performed_at timestamp
+}
+
+Table player.meditation_log {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  entry text
+  timestamp timestamp
+}
+
+Table player.grounding_exercises_log {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  technique text
+  notes text
+  timestamp timestamp
+}
+
+Table player.void_journal_entry {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  content text
+  created_at timestamp
+}
+
+Table player.tarot_card {
+  id serial [primary key]
+  name text
+  meaning text
+}
+
+Table player.tarot_reading {
+  id serial [primary key]
+  character_id int [ref: > player.character.id]
+  card_id int [ref: > player.tarot_card.id]
+  interpretation text
+  created_at timestamp
+}
+
+/* --- Narrative Schema --- */
+Table narrative.npc {
+  id serial [primary key]
+  name text
+  description text
+  location_id int [ref: > world.room.id]
+}
+
+Table key_narrative.npc {
+  id serial [primary key]
+  npc_id int [ref: > narrative.npc.id]
+  symbolic_role text
+}
+
+Table narrative.item {
+  id serial [primary key]
+  name text
+  description text
+  motif_id int [ref: > narrative.motif.id]
+}
+
+Table narrative.motif {
+  id serial [primary key]
+  symbol text
+  meaning text
+}
+
+Table narrative.ritual {
+  id serial [primary key]
+  name text
+  requirement text
+  effect text
+}
+
+Table narrative.place {
+  id serial [primary key]
+  name text
+  theme_id int [ref: > world.theme.id]
+  description text
+}
