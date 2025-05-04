@@ -1,5 +1,5 @@
 from .room import Room
-from random import choice
+from random import choice, choices
 
 class Theme:
     def __init__(self, name: str, core_concepts: list[str] = None,
@@ -20,6 +20,7 @@ class Theme:
     def generate_room(self) -> Room:
         room_name = self._name_room()
     
+    
     def _name_room(self) -> str:
         # get room type and remove from list
         room_type = choice(self.room_types)
@@ -33,15 +34,28 @@ class Theme:
         
         return room_name
 
+
     def _get_adjective(self) -> str:
         adjective = choice(self.adjectives)
         self.adjectives.remove(adjective)
         return adjective
+    
     
     def _describe_room(self) -> str:
         concept = choice(self.core_concepts)
         self.core_concepts.remove(concept)
         
         adjective = self._get_adjective()
+        
+        detail = choice(self.ambient_details)
+        self.ambient_details.remove(detail)
+        
+        items = choices(self.items, k=2)
+        for item in items:
+            self.items.remove(item)
+            
+        items_seen = f"You can make out {items[0]} and {items[1]}."
+        
+        description = f"The room feels {adjective} and of {concept}. {detail} {items_seen}"
         
         
