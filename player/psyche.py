@@ -1,9 +1,8 @@
 from enum import Enum
 
+
 MAX_PRESENCE = 50
 MIN_PRESENCE = -50
-
-
 
     
 class Conflict:
@@ -16,13 +15,13 @@ class Conflict:
         
 
 class ThresholdEventType(Enum):
-    WHISPER = (10, "A subtle inner shift. Fleeting, but meaningful.")
-    ECHO = (25, "A memory resurfaces. Something forgotten stirs.")
-    TREMOR = (40, "Emotional disturbance disrupts the surface.")
-    SURFACING = (55, "A repressed trait begins to manifest.")
-    RECKONING = (70, "The aspect demands action. Choices begin to reflect it.")
-    UNMASKING = (85, "A crisis or transformation point is reached.")
-    AWAKENING = (100, "Full emergence. A new part of you takes shape.")
+    WHISPER = (7, "A subtle inner shift. Fleeting, but meaningful.")
+    ECHO = (13, "A memory resurfaces. Something forgotten stirs.")
+    TREMOR = (21, "Emotional disturbance disrupts the surface.")
+    SURFACING = (27, "A repressed trait begins to manifest.")
+    RECKONING = (33, "The aspect demands action. Choices begin to reflect it.")
+    UNMASKING = (42, "A crisis or transformation point is reached.")
+    AWAKENING = (50, "Full emergence. A new part of you takes shape.")
     
     SHADOW_WHISPER = (-10, "Something stirs beneath. You try to ignore it.")
     FRACTURE = (-25, "You react poorly, blaming others or withdrawing.")
@@ -102,6 +101,7 @@ class Aspect:
 
     def __repr__(self):
         return f"Aspect(name={self.name}, description={self.description})"
+    
     
 class Psyche:
     def __init__(self, aspects: list[Aspect]):
