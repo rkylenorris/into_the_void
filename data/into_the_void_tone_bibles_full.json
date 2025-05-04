@@ -1,0 +1,298 @@
+{
+  "Void": {
+    "core_concepts": [
+      "Emptiness and annihilation",
+      "The infinite and unknowable",
+      "Silence as presence",
+      "Weightlessness, detachment",
+      "Pull toward dissolution"
+    ],
+    "room_types": [
+      "A room with no floor, only horizon",
+      "A chamber echoing nothing back",
+      "A space that stretches as you walk",
+      "A cliff's edge with no bottom in sight",
+      "A library of blank books"
+    ],
+    "adjectives": [
+      "endless",
+      "hollow",
+      "stilled",
+      "drifting",
+      "vacant",
+      "dilated",
+      "mute",
+      "withered",
+      "dissolved",
+      "cold"
+    ],
+    "ambient_details": [
+      "The silence bends your thoughts inward.",
+      "You feel your name fading at the edges.",
+      "Time stops counting here.",
+      "The walls pulse like lungs, but do not breathe.",
+      "There is no echo when you speak."
+    ],
+    "items": [
+      "A symbolic object",
+      "An artifact tied to the theme",
+      "A tool of inner journey"
+    ],
+    "actions": [
+      "Contemplate",
+      "Reach toward",
+      "Withdraw from",
+      "Speak to the silence"
+    ],
+    "motifs": [
+      "Black suns",
+      "Open doors that lead nowhere",
+      "Unfinished staircases",
+      "Floating debris",
+      "Dead languages"
+    ],
+    "tones": [
+      "Loss of self",
+      "Fear of being forgotten",
+      "Awe in insignificance",
+      "Peace in erasure",
+      "Isolation as truth"
+    ]
+  },
+  "Memory": {
+    "core_concepts": [
+      "Past as living architecture",
+      "Subjectivity of truth",
+      "Emotion embedded in place",
+      "Nostalgia and distortion",
+      "Time folded back on itself"
+    ],
+    "room_types": [
+      "A childhood bedroom, unchanged and dusty",
+      "A hallway lined with faces that know your name",
+      "A clock tower where each tick is a scream",
+      "A photo gallery where frames blink",
+      "A kitchen that smells like your favorite meal"
+    ],
+    "adjectives": [
+      "faded",
+      "sepia-toned",
+      "cluttered",
+      "overripe",
+      "preserved",
+      "warm",
+      "rusted",
+      "delicate",
+      "weathered"
+    ],
+    "ambient_details": [
+      "You hear laughter from long ago, faint but clear.",
+      "A breeze carries forgotten names.",
+      "Each step feels heavier, like retracing grief.",
+      "Objects here resist your touch.",
+      "Something old inside you stirs."
+    ],
+    "items": [
+      "A symbolic object",
+      "An artifact tied to the theme",
+      "A tool of inner journey"
+    ],
+    "actions": [
+      "Contemplate",
+      "Reach toward",
+      "Withdraw from",
+      "Speak to the silence"
+    ],
+    "motifs": [
+      "Photographs",
+      "Dust motes",
+      "Old letters",
+      "Crumpled notes",
+      "Worn toys"
+    ],
+    "tones": [
+      "Longing",
+      "Melancholy",
+      "Regret and remembrance",
+      "Confronting the personal myth",
+      "Frozen emotions"
+    ]
+  },
+  "Dream": {
+    "core_concepts": [
+      "Fluid logic and surrealism",
+      "Shifting realities",
+      "Absurdity and beauty interwoven",
+      "Freedom from causality",
+      "Symbols made flesh"
+    ],
+    "room_types": [
+      "A corridor that folds into itself",
+      "A garden where stars grow on vines",
+      "A room that changes every time you look away",
+      "A stairwell spiraling into a waterfall",
+      "A sky filled with floating furniture"
+    ],
+    "adjectives": [
+      "luminous",
+      "melting",
+      "impossible",
+      "curved",
+      "swaying",
+      "delicate",
+      "echoing",
+      "fluttering",
+      "waxen"
+    ],
+    "ambient_details": [
+      "Gravity feels like a suggestion.",
+      "The ceiling sings softly to itself.",
+      "Shapes flicker between familiar and unknown.",
+      "You taste color and feel sound.",
+      "Everything is real, and nothing is."
+    ],
+    "items": [
+      "A symbolic object",
+      "An artifact tied to the theme",
+      "A tool of inner journey"
+    ],
+    "actions": [
+      "Contemplate",
+      "Reach toward",
+      "Withdraw from",
+      "Speak to the silence"
+    ],
+    "motifs": [
+      "Butterflies",
+      "Moons",
+      "Eyes in the sky",
+      "Floating limbs",
+      "Unfinished sculptures"
+    ],
+    "tones": [
+      "Wonder and confusion",
+      "Uncertainty made beautiful",
+      "Epiphany or horror without cause",
+      "Freedom from form"
+    ]
+  },
+  "Mirror": {
+    "core_concepts": [
+      "Identity and duality",
+      "Reflection and recognition",
+      "Truth distorted",
+      "Self-awareness to the point of disintegration",
+      "Seeing oneself through another’s eyes"
+    ],
+    "room_types": [
+      "A room of perfect mirrors, but no reflection",
+      "A corridor where your doppelgänger walks beside you",
+      "A lake that mimics your thoughts aloud",
+      "A stage with a spotlight but no audience",
+      "An empty gallery titled 'You'"
+    ],
+    "adjectives": [
+      "fractured",
+      "polished",
+      "uncanny",
+      "shimmering",
+      "hollow",
+      "perfect",
+      "inverted",
+      "clean",
+      "duplicated"
+    ],
+    "ambient_details": [
+      "You are being watched — by yourself.",
+      "Your words come back in another voice.",
+      "The floor reflects your past, not your present.",
+      "The room breathes in sync with your fear.",
+      "You cannot blink until your reflection does."
+    ],
+    "items": [
+      "A symbolic object",
+      "An artifact tied to the theme",
+      "A tool of inner journey"
+    ],
+    "actions": [
+      "Contemplate",
+      "Reach toward",
+      "Withdraw from",
+      "Speak to the silence"
+    ],
+    "motifs": [
+      "Masks",
+      "Glass shards",
+      "Identical twins",
+      "The number two",
+      "Eyes behind eyes"
+    ],
+    "tones": [
+      "Self-confrontation",
+      "Discomfort in familiarity",
+      "Disassociation",
+      "Vulnerability",
+      "Truth as violation"
+    ]
+  },
+  "Shadow": {
+    "core_concepts": [
+      "The hidden self",
+      "Fear as revelation",
+      "Repression and return",
+      "Unseen forces",
+      "Darker reflections of known things"
+    ],
+    "room_types": [
+      "A hallway of locked doors, never the same twice",
+      "A theater showing your worst memories acted by strangers",
+      "A mirror maze where your shadow moves differently",
+      "A library of names you've forgotten",
+      "A cellar lit by your heartbeat"
+    ],
+    "adjectives": [
+      "flickering",
+      "crooked",
+      "dim",
+      "lurking",
+      "jagged",
+      "mute",
+      "hushed",
+      "slithering",
+      "blurred",
+      "fragile"
+    ],
+    "ambient_details": [
+      "The darkness leans closer when you breathe.",
+      "Your shadow whispers things you almost understand.",
+      "There is a heartbeat that isn’t yours.",
+      "You smell smoke, but there is no fire.",
+      "Your past self is standing just out of view."
+    ],
+    "items": [
+      "A symbolic object",
+      "An artifact tied to the theme",
+      "A tool of inner journey"
+    ],
+    "actions": [
+      "Contemplate",
+      "Reach toward",
+      "Withdraw from",
+      "Speak to the silence"
+    ],
+    "motifs": [
+      "Eyes without faces",
+      "Cloaks",
+      "Eclipses",
+      "Backwards writing",
+      "Empty masks"
+    ],
+    "tones": [
+      "Paranoia",
+      "Self-denial",
+      "Buried shame",
+      "Fear as a mirror",
+      "Recognition of what's been ignored"
+    ]
+  }
+}
