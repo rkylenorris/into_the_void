@@ -19,6 +19,8 @@ class Theme:
         
     def generate_room(self) -> Room:
         room_name = self._name_room()
+        items = self._get_items(num=2)
+        description = self._describe_room(items=items)
     
     
     def _name_room(self) -> str:
@@ -41,7 +43,13 @@ class Theme:
         return adjective
     
     
-    def _describe_room(self) -> str:
+    def _get_items(self, num: int = 2) -> list[str]:
+        items = choices(self.items, k=num)
+        for item in items:
+            self.items.remove(item)
+        return items
+    
+    def _describe_room(self, items: list[str]) -> str:
         concept = choice(self.core_concepts)
         self.core_concepts.remove(concept)
         
@@ -49,12 +57,8 @@ class Theme:
         
         detail = choice(self.ambient_details)
         self.ambient_details.remove(detail)
-        
-        items = choices(self.items, k=2)
-        for item in items:
-            self.items.remove(item)
             
-        items_seen = f"You can make out {items[0]} and {items[1]}."
+        items_seen = f"You can make out " + ", ".join(items[:-1]) + f", and {items[-1]}"
         
         description = f"The room feels {adjective} and of {concept}. {detail} {items_seen}"
         
