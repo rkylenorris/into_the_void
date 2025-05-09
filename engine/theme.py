@@ -26,13 +26,14 @@ class Theme:
     def _name_room(self) -> str:
         # get room type and remove from list
         room_type = choice(self.room_types)
+        room_index = 3 if room_type.startswith('An ') else 2
         self.room_types.remove(room_type)
         
         # get adjective and remove from list
         adjective = self._get_adjective()
         
         # create room name
-        room_name = f"The {adjective} {room_type[2:]}".title()
+        room_name = f"The {adjective} {room_type[room_index:]}".title()
         
         return room_name
 
